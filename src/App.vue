@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-container>
+      <el-header>
+        <NavMenu></NavMenu>
+      </el-header>
+      <el-main>
+        <router-view></router-view> <!--路由出口 -->
+      </el-main>
+      <el-footer>Footer</el-footer>
+    </el-container>
   </div>
 </template>
 
 <script>
+import NavMenu from "./components/NavMenu";
 export default {
-  name: 'App'
+  name: 'App',
+  components: {NavMenu}
 }
 </script>
 
@@ -16,8 +25,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
